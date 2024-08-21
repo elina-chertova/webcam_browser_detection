@@ -1,25 +1,28 @@
+import os
 import cv2
 from ultralytics import YOLO
 from flask import Flask, render_template, Response
+from dotenv import load_dotenv
+from helper import string_to_boolean
+load_dotenv()
 
 
 app = Flask(__name__)
 
-
-model = YOLO('tiny_512_trained_pruned_0_5.pt')
-
-
-# # stream=False
-# def run_inference(frame):
-#     results = model(frame)
-#     annotated_frame = results[0].plot()
-#     return annotated_frame
+model_name = os.getenv('MODEL_PATH')
+STREAM = string_to_boolean(os.getenv('STREAM'))
+model = YOLO(model_name)
 
 
 def run_inference(frame):
-    results = model(frame, stream=True)
-    for result in results:
-        annotated_frame = result.plot()
+    if STREAM is True:
+        results = model(frame, stream=True)
+        for result in results:
+            annotated_frame = result.plot()
+            return annotated_frame
+    else:
+        results = model(frame)
+        annotated_frame = results[0].plot()
         return annotated_frame
 
 
