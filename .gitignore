@@ -5,7 +5,6 @@
 /nano_trained_pruned_0_5.pt
 /nano_trained_pruned_1_0.pt
 /pruning.py
-/requirements.txt
 /requirements1.txt
 /tiny_512_trained_pruned_0_5.pt
 /tiny_512_trained_pruned_1_0.pt
