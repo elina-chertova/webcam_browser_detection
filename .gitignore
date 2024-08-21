@@ -1,0 +1,17 @@
+/main_media.py
+/nano_512_trained_pruned_0_5.pt
+/nano_512_trained_pruned_1_0.pt
+/nano_old.pt
+/nano_trained_pruned_0_5.pt
+/nano_trained_pruned_1_0.pt
+/pruning.py
+/requirements.txt
+/requirements1.txt
+/tiny_512_trained_pruned_0_5.pt
+/tiny_512_trained_pruned_1_0.pt
+/tiny_new.pt
+/tiny_trained_pruned_0_5.pt
+/tiny_trained_pruned_1_0.pt
+/best_nano_512.pt
+/best_tiny_512.pt
+/ddd.py

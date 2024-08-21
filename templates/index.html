@@ -1,0 +1,38 @@
+<!doctype html>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Webcam Inference</title>
+    <style>
+      .corner {
+        border-radius: 25px;
+        border: 5px solid #212aad;
+        padding: 0px;
+        width:60%;
+        height:auto;
+        text-align: center;
+      }
+
+      .video-container {
+        justify-content: center;
+        text-align: center;
+        height:100%;
+        /*border: 1px solid black;*/
+      }
+
+    </style>
+  </head>
+
+  <body >
+      <div class="video-container">
+          <img src="{{ url_for('video') }}" class="corner"></img>
+
+      </div>
+    </body>
+</html>
